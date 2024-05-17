@@ -5,10 +5,12 @@ on:
 
 jobs:
   test:
-    uses: rajilingam/reusableworkflow/.github/workflows/Test Reusable Workflow.yml@main
+    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable-workflow.yml@master
     with:
-      input1: value1
-      input2: value2
+      input1: "raji"  # Replace with actual value
+      input2: "lingam"  # Optional, can be omitted
     secrets:
-      secret1: ${{ secrets.SECRET1 }}
-      secret2: ${{ secrets.SECRET2 }}
+      secret1: ${{ secrets.SECRET1 }}  # Ensure this secret exists
+      secret2: ${{ secrets.SECRET2 }}  # Optional, ensure this secret exists if used
+
+      
