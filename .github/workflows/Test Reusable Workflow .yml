@@ -24,9 +24,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use inputs
-        run: echo "Input1: ${{ inputs.input1 }}"
-        run: echo "Input2: ${{ inputs.input2 }}"
+        run: |
+          echo "Input1: ${{ inputs.input1 }}"
+          echo "Input2: ${{ inputs.input2 }}"
 
       - name: Use secrets
-        run: echo "Secret1: ${{ secrets.secret1 }}"
-        run: echo "Secret2: ${{ secrets.secret2 }}"
+        run: |
+          echo "Secret1: ${{ secrets.secret1 }}"
+          echo "Secret2: ${{ secrets.secret2 }}"
+
