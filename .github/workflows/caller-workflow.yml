@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable-workflow.yml@main
+    uses: rajilingam/reusableworkflow/.github/workflows/Test Reusable Workflow.yml@main
     with:
       input1: value1
       input2: value2
