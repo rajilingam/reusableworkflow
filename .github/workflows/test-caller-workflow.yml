@@ -8,4 +8,4 @@ jobs:
 
   test:
     # call the Reusable Workflow file
-    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable.yml@master
+    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable.yml@main
