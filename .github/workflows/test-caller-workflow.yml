@@ -8,4 +8,4 @@ jobs:
 
   test:
     # call the Reusable Workflow file
-    uses: <ORG_NAME>/atlas-github-actions/.github/workflows/test-reusable-workflow.yml@master
+    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable.yml@master
