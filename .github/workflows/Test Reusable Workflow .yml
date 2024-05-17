@@ -1,0 +1,32 @@
+name: Test Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      input1:
+        required: true
+        type: string
+      input2:
+        required: false
+        type: string
+    secrets:
+      secret1:
+        required: true
+      secret2:
+        required: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use inputs
+        run: echo "Input1: ${{ inputs.input1 }}"
+        run: echo "Input2: ${{ inputs.input2 }}"
+
+      - name: Use secrets
+        run: echo "Secret1: ${{ secrets.secret1 }}"
+        run: echo "Secret2: ${{ secrets.secret2 }}"
