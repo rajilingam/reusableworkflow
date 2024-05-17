@@ -1,11 +1,14 @@
 name: Caller Workflow
 
-on: 
-  # can be ran manually
+on:
   workflow_dispatch:
 
 jobs:
-
   test:
-    # call the Reusable Workflow file
-    uses: rajilingam/reusableworkflow/.github/workflows/test-reusable.yml@main
+    uses: ORG_NAME/repo-name/.github/workflows/test-reusable-workflow.yml@master
+    with:
+      input1: value1
+      input2: value2
+    secrets:
+      secret1: ${{ secrets.SECRET1 }}
+      secret2: ${{ secrets.SECRET2 }}
